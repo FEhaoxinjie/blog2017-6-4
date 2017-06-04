@@ -1,9 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>第一个博客</title>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/Select.css" type="text/css">
+    <script src="js/ajax.js" ></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/change.js" type="text/javascript"></script>
 </head>
 <body>
-内容
+    <div class="page">
+        <span class="bg"></span>
+        <div class="header">
+            <div class="header_left">
+                <span>请输入查询条件：</span>
+                <select id="select_type" onchange="change()">
+                    <option value="0">全部</option>
+                    <option value="1">手机型号</option>
+                    <option value="2">姓名</option>
+                    <option value="3">手机号</option>
+                    <option value="4">入库日期</option>
+                    <option value="5">支付日期</option>
+                </select>
+                <input type="text"  value="" placeholder="请输入...." id="textinfo">
+                <input type="date" value="" id="dateinfo">
+            </div>
+           <div class="header_right">
+                <input type="button" value="查询" id="select_1" onclick="chaxun()" >
+                <input type="button" value="重置" id="reset">
+                <input type="button" value="导入数据" id="daoru" onclick="daoru()">
+                <input type="button" value="退出"  onclick="tuichu()" >
+           </div>
+        </div>
+
+        <div class="content">
+            <table border="1" id="info">
+
+            </table>
+            <a href="#">回到顶部</a>
+        </div>
+    </div>
 </body>
 </html>
