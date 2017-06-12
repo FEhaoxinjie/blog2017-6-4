@@ -1,5 +1,6 @@
 .page_1{
     background:  url(images/bg1.jpg) 0 0 no-repeat;
+	backgroun-size:cover;
 }
 .page_2{
     background-color: black;
