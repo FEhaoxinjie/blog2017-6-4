@@ -1,0 +1,27 @@
+.page_1{
+    background:  url(images/bg1.jpg) 0 0 no-repeat;
+}
+.page_2{
+    background-color: black;
+}
+.page_3{
+    background-color: skyblue;
+}
+.page_4{
+    background-color: green;
+}
+.page_5{
+    background-color: tan;
+}
+.page_6{
+    background-color: yellowgreen;
+}
+.position{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+    z-index: -1;
+}
