@@ -1,73 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MyBlog</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/Page.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/music.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
-        <ul>
-            <li id="first">
-                <span>首页</span>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-            </li>
-            <li id="second">
-                <span>2</span>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-            </li>
-            <li id="third">
-                <span>3</span>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-            </li>
-            <li id="fourth">
-                <span>4</span>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-            </li>
-            <li id="fifth">
-                <span>5</span>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-            </li>
-            <li id="sixth">
-                <span>6</span>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-                <div class="border"></div>
-            </li>
-        </ul>
-    <div class="page_1 position" style="display: block">
-        <div class="header_left">
+        <div class="nav">
+                <div class="nav_bar"><ul>
+                <li id="first">
+                    <span>首页</span>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                </li>
+                <li id="second">
+                    <span>足迹</span>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                </li>
+                <li id="third">
+                    <span>技术</span>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                </li>
+                <li id="fourth">
+                    <span>canvas</span>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                </li>
+                <li id="fifth">
+                    <span>找</span>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                </li>
+            </ul></div>
         </div>
-        <section class="">
-        </section>
+    <div class="page_1 position" style="display: block" id="1_page">
+        <div class="header_left">
+            <input type="file" id="file" accept="audio/mp3,audio/ogg" multiple>
+            <div class="music_player" id="music-player">
+                <audio id="player">
+                </audio>
+                <div class="music_content">
+                    <div class="rotate_img">
+                    <img src="css/images/bg3.jpg" alt="" id="image">
+                    </div>
+                    <span class="music_name" >
+                        <i id="music-name"></i>
+                    </span>
+                    <span id="add-music" title="添加音乐"><i class="fa fa-upload" aria-hidden="true"></i></span>
+
+                    <div class="contorls" >
+                    <button id="music-stop">
+                        <i class="fa fa-play" aria-hidden="true" id="control-icon"></i>
+                    </button>
+
+                    <button id="music-pre" title="上一首">
+                        <i class="fa fa-fast-backward" aria-hidden="true"></i>
+                    </button>
+
+                    <button id="music-next" title="下一首">
+                        <i class="fa fa-fast-forward" aria-hidden="true"></i>
+                    </button>
+
+
+                    <div id="sound-icon">
+                        <i class="fa fa-volume-up" aria-hidden="true" id="volume"></i>
+                        <i class="fa fa-minus-circle" aria-hidden="true" id="volume-down" title="降低"></i>
+                        <progress value="10" max="10" id="music-sound"></progress>
+                        <i class="fa fa-plus-circle" aria-hidden="true" id="volume-up" title="提高"></i>
+                    </div>
+                </div>
+                </div>
+                <div class="music_progress">
+                        <progress value="0" max="100" id="music-progress"></progress>
+                </div>
+                        <span id="current-time">0:00</span><span id="duration">/0:00</span>
+                        <span class="music-list-control">
+                            <i id="music-list-control" class="fa fa-chevron-circle-down"></i>
+                        </span>
+                        <img src="css/images/loop.png" id="play-style-loop" title="顺序播放" class="">
+                        <img src="css/images/random.png" id="play-style-random" title="随机播放" class="hidden">
+                </div>
+                <div id="music-list">
+                <ul id="musics"></ul>
+                </div>
+            </div>
         <div class="content"></div>
+        </div>
         <div class="footer"></div>
     </div>
-    <div class="page_2 position">
-
+    <div class="page_2 position" id="2_page">
     </div>
-    <div class="page_3 position">3</div>
-    <div class="page_4 position">4</div>
-    <div class="page_5 position">5</div>
-    <div class="page_6 position">6</div>
+    <div class="page_3 position" id="3_page">3</div>
+    <div class="page_4 position" id="4_page" >4</div>
+    <div class="page_5 position" id="5_page">5</div>
 </body>
+<script src="js/music.js"></script>
 </html>

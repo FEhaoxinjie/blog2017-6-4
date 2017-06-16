@@ -28,8 +28,4 @@ $(document).ready(function () {
         $(".position").fadeOut(2000);
         $(".page_5").fadeToggle(1000);
     })
-    $("#sixth").click(function () {
-        $(".position").fadeOut(2000);
-        $(".page_6").fadeToggle(1000);
-    })
 })

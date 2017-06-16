@@ -1,0 +1,292 @@
+.header_left{
+  width: 25%;
+  height: 150px;
+  float: left;
+  position: relative;
+  margin-left: 5%;
+}
+.header_left .music_player{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.header_left .music_player:hover{
+  opacity: 0.5;
+}
+.header_left #file{
+  display: none;
+}
+.header_left .music_player .music_content{  
+  height: 70%;
+}
+.header_left .music_player .music_content .rotate_img{
+  width: 30%;
+  height: 100%;
+}
+.header_left .music_player .music_content .music_name{
+  width: 35%;
+  height: 20%;
+  position: absolute;
+  left: 30%;
+  top:10%;
+  text-align: center;
+}
+.header_left .music_player .music_content .music_name i{
+  letter-spacing: 5px;
+  font-style: normal;
+}
+.header_left .music_player .music_content .contorls{
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  left: 30%;
+  top:20%;
+}
+/*控制按钮开始*/
+.header_left .music_player .music_content .contorls #music-stop{
+  position: absolute;
+  left: 18%;
+  top:30%;
+  width: 15%;
+  height: 58%;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: transparent;
+  /*background-image: linear-gradient(to bottom,#FFFFE0 0%,#EEEED1 1%,	#CDCDB4 100%);*/
+}
+.header_left .music_player .music_content .contorls #music-pre{
+  position: absolute;
+  left: 3%;
+  top:42%;
+  width: 10%;
+  height: 39%;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: transparent;
+  /*background-image: linear-gradient(to bottom,#FFFFE0 0%,#EEEED1 1%,	#CDCDB4 100%);*/
+}
+.header_left .music_player .music_content .contorls #music-next{
+  position: absolute;
+  left: 38%;
+  top:42%;
+  width: 10%;
+  height: 39%;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: transparent;
+  /*background-image: linear-gradient(to bottom,#FFFFE0 0%,#EEEED1 1%,	#CDCDB4 100%);*/
+}
+.header_left .music_player .music_content .contorls #music-stop:hover,
+.header_left .music_player .music_content .contorls #music-pre:hover,
+.header_left .music_player .music_content .contorls #music-next:hover{
+  cursor: pointer;
+  background-image: linear-gradient(to bottom,#FFFFE0 0%,#EEEED1 1%,	#CDCDB4 100%)
+  /*background-image: linear-gradient(#f5f7fa 0%,#c3cfe2 1%,#000 100%);*/
+}
+.header_left .music_player .music_content .contorls #music-stop:active,
+.header_left .music_player .music_content .contorls #music-pre:active,
+.header_left .music_player .music_content .contorls #music-next:active{
+  cursor: pointer;
+  background-image: linear-gradient(to top,#f5f7fa 0%,#c3cfe2 1%,#000 100%);
+}
+.header_left .music_player .music_content .contorls #sound-icon{
+  width: 50%;
+  height: 100%;
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+.header_left .music_player .music_content .contorls #sound-icon #volume:hover,
+.header_left .music_player .music_content .contorls #sound-icon #volume-down:hover,
+.header_left .music_player .music_content .contorls #sound-icon #volume-up:hover,.header_left .music_player #add-music:hover{
+  color: gray;
+  cursor: pointer;
+}
+.header_left .music_player .music_content .contorls #sound-icon progress{
+  width: 50%;
+  height: 20%;
+  margin-top: 30%;
+  cursor:pointer;
+  background-color: white;
+}
+#sound-icon progress::-webkit-progress-value {
+  background-color: gray;
+}
+#sound-icon progress:hover::-webkit-progress-value{
+  background-color: cadetblue;
+}
+#sound-icon progress::-webkit-progress-bar
+{ background: transparent; }
+
+.header_left .music_progress progress{
+  background-color: white;
+  cursor: pointer;
+}
+
+/*进度条结束*/
+
+/*时间和播放模式开始*/
+#current-time,#duration{
+  color: wheat;
+}
+#play-style-loop,#play-style-random{
+  cursor: pointer;
+}
+#play-style-loop.hidden, #play-style-random.hidden {
+  visibility: hidden;
+}
+/*时间和播放模式结束*/
+.header_left .music_player .music_content #add-music{
+  position: absolute;
+  left: 95%;
+  top:-2%;
+}
+/*控制按钮结束*/
+/*图片旋转*/
+.header_left .music_player .music_content .rotate_img img{
+  width: 85%;
+  height: 95%;
+  border-radius: 100%;
+  animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+/*进度条开始*/
+#music-progress{
+  height: 100%;
+}
+#music-progress::-webkit-progress-value {
+  background-image: linear-gradient(to right,WhiteSmoke 0%,rgb(187,255,255) 50%,rgb(187,255,255) 70%,	rgb(83,134,139) 100%);
+}
+#music-progress:hover::-webkit-progress-value{
+  background-image: linear-gradient(to right,rgb(83,134,139) 0%,rgb(187,255,255) 50%,rgb(187,255,255) 70%,WhiteSmoke 100%);
+}
+#music-progress::-webkit-progress-bar { background: transparent;
+}
+.header_left .music_player .music_progress{
+  height: 3%;
+}
+.header_left .music_player .music_progress progress{
+  width: 100%;
+  height: 100%;
+}
+.header_left .music_player  #current-time{
+  position: absolute;
+  left: 0%;
+  top:85%;
+}
+.header_left .music_player #duration{
+  position: absolute;
+  left: 8%;
+  top:85%;
+}
+.header_left .music_player #play-style-loop{
+  position: absolute;
+  left: 95%;
+  top: 85%;
+}
+.header_left .music_player #play-style-random{
+  position: absolute;
+  left: 95%;
+  top: 86%;
+}
+.music-name{
+  color: gray;
+  width: 35%;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+#music-list{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 2%;
+}
+
+::-webkit-scrollbar-track {
+  background-color:rgba(245,245,245,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(248,248,255,0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: white
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: white;
+}
+#music-list #musics li.selected{
+  color: wheat;
+  background-color: rgba(255,240,245,0.5);
+}
+#music-list #musics li{
+  border: 1px solid gray;
+  color: whitesmoke;
+  list-style: none;
+  cursor: pointer;
+}
+#music-list #musics li:hover{
+  border: 1px solid white;
+  background-color: rgba(225,225,225,0.3);
+}
+#music-list #musics:active{
+  color: wheat;
+}
+.music-list-control{
+  width: 10%;
+  position: absolute;
+  left: 45%;
+  top: 85%;
+}
+.music-list-control i{
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+ .animationUp{
+  animation: musicListcontrolup  1s linear;
+}
+.animationDown{
+  animation: musicListcontroldown  1s linear;
+}
+@keyframes musicListcontrolup {
+   from{
+     height:100% ;
+     visibility: visible;
+   }
+   to{
+     height: 0%;
+     visibility: hidden;
+   }
+ }
+@keyframes musicListcontroldown {
+  from{
+    height:0% ;
+    visibility: hidden;
+  }
+  to{
+    height: 100%;
+    visibility: visible;
+  }
+}
+.special{
+  visibility: hidden;
+}

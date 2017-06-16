@@ -1,6 +1,6 @@
 .page_1{
-    background:  url(images/bg1.jpg) 0 0 no-repeat;
-	backgroun-size:cover;
+    background:  url("images/bg1.jpg") 0 0 no-repeat;
+    background-position: center;
 }
 .page_2{
     background-color: black;
@@ -12,9 +12,6 @@
     background-color: green;
 }
 .page_5{
-    background-color: tan;
-}
-.page_6{
     background-color: yellowgreen;
 }
 .position{
@@ -24,5 +21,6 @@
     left: 0;
     top:0;
     display: none;
-    z-index: -1;
+    z-index: 1;
+    margin: auto;
 }
