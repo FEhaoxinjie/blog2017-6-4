@@ -12,11 +12,11 @@
     text-align: center;
     clear: both;
     margin:auto;
-    margin-left: 45%;
+    margin-left: 20%;
 }
 .nav .nav_bar ul{
     padding-top: 7%;
-    width:100%;
+    width: 1000px;;
     height: 100%;
     list-style: none;
     z-index: 0;
@@ -27,12 +27,12 @@
     font-size: 25px;
     font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
     color:gray;
-    width: 15%;
+    width: 130px;
     line-height: 50px;
     text-align: center;
     opacity: 0.3;
     float: left;
-    margin-left: 5%;
+    margin-left:20px;
 }
 .nav .nav_bar ul li span{
     transition:all .4s ease-in-out;

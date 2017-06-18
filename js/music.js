@@ -146,7 +146,7 @@
 		e.preventDefault();
 	});
 
-	
+
 	musicPlayer.addEventListener("drop", readData, false);
 	function readData(e) {
 		e.preventDefault();
@@ -229,12 +229,13 @@
 		var name = event.target.innerHTML;
 		preparePlay(musicQueue.getMusicByName(name));
 	},false);
-	
+
 	musiclist_control.addEventListener("click",function () {
 		if (musiclist_control.classList=="fa fa-chevron-circle-down")
 		{
 			musiclist_control.classList.remove("fa-chevron-circle-down")
 			musiclist_control.classList.add("fa-chevron-circle-up")
+			musiclist_controls.classList.remove("animationDown")
 			musiclist_controls.classList.add("animationUp")
 			musiclist_controls.classList.add("special")
 		}
@@ -329,7 +330,7 @@
 
 	function changeImage() {
 		var num = parseInt(Math.random() * 16),
-			src;	
+			src;
 
 		num = (num > 0) ? num : num + 1;
 		src = "css/"+"images/" + num + ".jpg";

@@ -7,6 +7,7 @@ var page_3=$(".page_3");
 var page_4=$(".page_4");
 var page_5=$(".page_5");
 var page_6=$(".page_6");
+var music_player=$("#music-player");
 $(document).ready(function () {
     $("#first").click(function () {
             $(".position").fadeOut(200);
